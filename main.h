@@ -1,73 +1,45 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-[A[B[B[B[B[B[A[A[A[A[A[A[B[B#include <limits.h>
-#include
-#include
-#include[A[A[C<stdarg.h>[B[D[D[D[D[D[D[D[D[D[D<stdlib.h>[B[D[D[D[D[D[D[D[D[D[
-[A[B/* Flag Modifiers */
+#include <limits.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+/* Flag Modifier*/
 #define PLUS 1
-#define
-#define
-#define
-#define
-#define
-#define[A[A[A[A[A[A[B[B[B[B[B[B
-#define
-#define
-#define[A[A[A[A[A[A[A[A[A[B[B[B[B[B[B[B[B[B[A[A[A[A[A[A[A[A[A[B	SPACE 2
-[C[C[C[C[C[C[C[C[C[C[C[C[D[D[D[DHASH 4[B[D[D[D[D[D[D[A[D[D[C[C[D[[C[BZERO 8[B[D[D[D[D[D[DNEG 16[B[D[D[D[D[D[DPLUS_FLUG[A[C[B[D[D[D[D[D[D[D[D[D[A[C[C[C[C[C[C[C[C[C[C[C[D[D[C(flags $ 1)[D[D[D[D[C[C[C[C[C & 1)[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[DSPACE_FLAG ((flags >> 1) & 1)
-[C[C[C[C[C[C[C[CHASH_FLAG ((flags >> 2) & 1)[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[BZERO_FLAG ((flags >> 4) & 1)[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[BNEG_FLAG ((flags >>[A[C[C[3[B[D[D[D 4) & 1)
+#define SPACE 2
+#define HASH 4
+#define ZERO 8
+#define NEG 16
+#define PLUS_FLAG (flags & 1)
+#define SPACE_FLAG ((flags >> 1) & 1)
+#define HASH_FLAG ((flags >> 2) & 1)
+#define ZERO_FLAG ((flags >> 3) & 1)
+#define NEG_FLAG ((flags >> 4) & 1)
 
-[A[B/* Macros Modifier Lenth */
+/* Length Modifier Macros */
 #define SHORT 1
-#define LONG 2[B[B
+#define LONG 2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B/**
-*
-*
-*
-*
-*/[A[A[A[A[D[Cstruct buffer_s - Defining buffer struct.[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D@buffer: Pointer to character array.[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D@start: pointer to start buffer[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D@len: string stored in buffer[B[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[Dtypedef struct buffer_s
-{[B[A
+/**
+ * struct buffer_s - A buffer struct.
+ * @buffer: Points to a character array.
+ * @start: Points to the start of buffer.
+ * @len: length of the string stored in buffer.
+ */
+typedef struct buffer_s
+{
 	char *buffer;
 	char *start;
 	unsigned int len;
 } buffer_t;
 
 /**
-*
-*[A struct [B[B[B[B[B[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[B[B[B[B[B
-
-
-
-
-
-
-
-
-
-
-
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B[B[C[C[C[C[C[C[C[C[C[C[C[C[C[D[D[D[D[D converter_s - New converter struct.
-[C @specifier: character presenting conversion specifier
-* @func: pointer to corresponding specifier
-*/
+ * struct converter_s - A new type defining a converter struct.
+ * @specifier: A character representing a conversion specifier.
+ * @func: A pointer to a conversion function corresponding to specifier.
+ */
 typedef struct converter_s
 {
 	unsigned char specifier;
@@ -75,36 +47,20 @@ typedef struct converter_s
 			unsigned char, int, int, unsigned char);
 } converter_t;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B/**
-*
-*
-*
-*[A[A[A struct flags_s - new flags struct
-* [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
-[C[C[C[D@flag: character representing a flag.
-[C[C@value: integer value of flag.
-[C[/
-
-[Atypedef struct flags_s
+/**
+ * struct flag_s - A new type defining a flags struct.
+ * @flag: Character representing a flag.
+ * @value: Integer value of the flag.
+ */
+typedef struct flag_s
 {
 	unsigned char flag;
 	unsigned char value;
-} flag_t;[B[D[D[D[D[D[D[D[D[D[D[D[D[D[Bint _printf(const char *format, ...);[[B/* Conversion Specifier Functions */
+} flag_t;
+
+int _printf(const char *format, ...);
+
+/* Conversion Specifier Functions */
 unsigned int convert_c(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_s(va_list args, buffer_t *output,
@@ -158,4 +114,3 @@ unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec);
 
 #endif
-[A[C[C[C[C[C[C[C
