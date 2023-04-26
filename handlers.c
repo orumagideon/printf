@@ -9,8 +9,8 @@ unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 
 /**
  * handle_flags – Function matches flags with corresponding values.
- * @flag: A pointer to a potential string of flags.
- * @index: The index counter for the original format string.
+ * @flag: funcrion parameter
+ * @index: funcrion parameter
  *
  * Return: If flag characters are matched – to a corresponding value.
  *         Otherwise - 0.

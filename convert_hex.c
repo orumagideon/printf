@@ -9,11 +9,11 @@ unsigned int convert_X(va_list args, buffer_t *output,
  * convert_x – Function converts an unsigned int argument to hex using abcdef
  *             and stores it to a buffer contained in a struct.
  * @args: A va_list points to the argument to be converted.
- * @flags: Flag modifiers.
- * @wid: A width modifier.
- * @prec: A precision modifier.
- * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @flags: function parameter
+ * @wid: function parameter
+ * @prec: function parameter
+ * @len: function parameter
+ * @output: function parameter
  *
  * Return: The number of bytes stored to the buffer.
  */

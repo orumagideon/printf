@@ -12,12 +12,12 @@ unsigned int convert_R(va_list args, buffer_t *output,
 /**
  * convert_s - Converts an argument to a string and
  *             stores it to a buffer contained in a struct.
- * @args: A va_list pointing to the argument to be converted.
- * @flags: Flag modifiers.
- * @wid: A width modifier.
- * @prec: A precision modifier.
- * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @args: funcrion parameter
+ * @flags: funcrion parameter
+ * @wid: funcrion parameter
+ * @prec: funcrion parameter
+ * @len: funcrion parameter
+ * @output: funcrion parameter
  *
  * Return: Number of bytes stored to the buffer.
  */

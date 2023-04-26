@@ -9,11 +9,10 @@ unsigned int print_neg_width(buffer_t *output, unsigned int printed,
 
 /**
  * print_width – A buffer for a width modifier.
- * @output: A buffer_t struct contains a character array.
- * @printed: Number of characters already printed to output
- *           for a given number specifier.
- * @flags: Flag modifiers.
- * @wid: A width modifier.
+ * @output: funcrion parameter
+ * @printed: funcrion parameter
+ * @flags: funcrion parameter
+ * @wid: funcrion parameter
  *
  * Return: Number of bytes stored to the buffer.
  */

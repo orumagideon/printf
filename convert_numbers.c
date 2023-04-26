@@ -12,12 +12,12 @@ unsigned int convert_o(va_list args, buffer_t *output,
 /**
  * convert_di - Converts an argument to a signed int and
  *              stores it to a buffer contained in a struct.
- * @args: A va_list points to the argument to be converted.
- * @flags: Flag modifiers.
- * @wid: A width modifier.
- * @prec: A precision modifier.
- * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @args: funcrion parameter
+ * @flags:funcrion parameter
+ * @wid: funcrion parameter
+ * @prec: funcrion parameter
+ * @len: funcrion parameter
+ * @output: funcrion parameter
  *
  * Return: The number of bytes stored to the buffer.
  */
