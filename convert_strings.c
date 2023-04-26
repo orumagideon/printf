@@ -8,7 +8,6 @@ unsigned int convert_r(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
-
 /**
  * convert_s - Converts an argument to a string and
  *             stores it to a buffer contained in a struct.

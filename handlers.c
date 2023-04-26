@@ -6,7 +6,6 @@ int handle_width(va_list args, const char *modifier, char *index);
 int handle_precision(va_list args, const char *modifier, char *index);
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 		unsigned char, int, int, unsigned char);
-
 /**
  * handle_flags – Function matches flags with corresponding values.
  * @flag: funcrion parameter
@@ -48,7 +47,6 @@ unsigned char handle_flags(const char *flag, char *index)
 
 	return (ret);
 }
-
 /**
  * handle_length – Function matches length modifiers with their corresponding value.
  * @modifier: A pointer to a potential length modifier.
@@ -73,7 +71,6 @@ unsigned char handle_length(const char *modifier, char *index)
 
 	return (0);
 }
-
 /**
  * handle_width – Function matches a width modifier with its corresponding value.
  * @args: A va_list of arguments.

@@ -3,7 +3,6 @@
 unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
 void free_buffer(buffer_t *output);
 buffer_t *init_buffer(void);
-
 /**
  * _memcpy – Copies n bytes from memory area src to
  *           the buffer contained in a buffer_t struct.
@@ -35,7 +34,6 @@ unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n)
 
 	return (n);
 }
-
 /**
  * free_buffer – Function to free buffer_t struct.
  * @output: The buffer_t struct to be freed.
@@ -45,7 +43,6 @@ void free_buffer(buffer_t *output)
 	free(output->start);
 	free(output);
 }
-
 /**
  * init_buffer - Initializes a variabl type buffer_t.
  *
@@ -71,4 +68,3 @@ buffer_t *init_buffer(void)
 
 	return (output);
 }
-

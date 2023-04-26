@@ -34,7 +34,6 @@ typedef struct buffer_s
 	char *start;
 	unsigned int len;
 } buffer_t;
-
 /**
  * struct converter_s - A new type defining a converter struct.
  * @specifier: A character representing a conversion specifier.
@@ -46,7 +45,6 @@ typedef struct converter_s
 	unsigned int (*func)(va_list, buffer_t *,
 			unsigned char, int, int, unsigned char);
 } converter_t;
-
 /**
  * struct flag_s - A new type defining a flags struct.
  * @flag: Character representing a flag.
