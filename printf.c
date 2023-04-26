@@ -63,9 +63,9 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 }
 /**
  * _printf - Outputs a formatted string.
- * @format: Character string to print - may contain directives.
+ * @format: function parameters
  *
- * Return: The number of characters printed.
+ * Return: return characters printed.
  */
 int _printf(const char *format, ...)
 {
