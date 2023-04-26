@@ -112,8 +112,8 @@ unsigned int convert_S(va_list args, buffer_t *output,
  *             to a buffer contained in a struct.
  * @args: A va_list points to the string to be reversed.
  * @flags: Flag modifiers.
- * @wid: A width modifier.
- * @prec: A precision modifier.
+ * @wid: function parameter
+ * @prec: function parameter
  * @len: A length modifier.
  * @output: A buffer_t struct containing a character array.
  *
