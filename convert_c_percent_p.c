@@ -79,7 +79,7 @@ unsigned int convert_percent(va_list args, buffer_t *output,
  * Return: The number of bytes stored to the buffer.
  */
 unsigned int convert_p(va_list args, buffer_t *output,
-		unsigned char flags, int wid, int prec, unsigned char len)
+    unsigned char flags, int wid, int prec, unsigned char len)
 {
 	char *null = "(nil)";
 	unsigned long int address;
@@ -89,8 +89,9 @@ unsigned int convert_p(va_list args, buffer_t *output,
 
 	address = va_arg(args, unsigned long int);
 	if (address == '\0')
+    {
 		return (_memcpy(output, null, 5));
-
+    }
 	flags |= 32;
 	ret += convert_ubase(output, address, "0123456789abcdef",
 			flags, wid, prec);

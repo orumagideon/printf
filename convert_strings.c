@@ -32,8 +32,9 @@ unsigned int convert_s(va_list args, buffer_t *output,
 
 	str = va_arg(args, char *);
 	if (str == NULL)
+    {
 		return (_memcpy(output, null, 6));
-
+    }
 	for (size = 0; *(str + size);)
 		size++;
 
@@ -77,11 +78,13 @@ unsigned int convert_S(va_list args, buffer_t *output,
 	(void)len;
 	str = va_arg(args, char *);
 	if (str == NULL)
+    {
 		return (_memcpy(output, null, 6));
-
+    }
 	for (size = 0; str[size];)
+    {
 		size++;
-
+    }
 	ret += print_string_width(output, flags, wid, prec, size);
 
 	prec = (prec == -1) ? size : prec;
