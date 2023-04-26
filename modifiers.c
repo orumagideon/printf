@@ -55,11 +55,9 @@ unsigned int print_string_width(buffer_t *output,
 /**
  * print_neg_width - Stores trailing spaces to a buffer for a '-' flag.
  * @output: A buffer_t struct containing a character array.
- * @printed: Number of bytes already stored to output
- *           for a given specifier.
- * @flags: Flag modifiers.
- * @wid: A width modifier.
- *
+ * @printed: function parameters
+ * @flags: function parameters
+ * @wid: function parameters.
  * Return: Number of bytes stored to the buffer.
  */
 unsigned int print_neg_width(buffer_t *output, unsigned int printed,
