@@ -45,8 +45,7 @@ void free_buffer(buffer_t *output)
 }
 /**
  * init_buffer - Initializes a variabl type buffer_t.
- *
- * Return: Pointer to the initialized buffer_t.
+ * Return: return pointer to the initialized buffer_t.
  */
 buffer_t *init_buffer(void)
 {
